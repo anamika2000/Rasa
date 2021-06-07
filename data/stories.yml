@@ -1,0 +1,248 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story:  buisness path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Buisness_intelligence
+  - action: utter_Buisness_intelligence
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: affirm
+  - action: utter_give_details
+
+- story:  buisness path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Buisness_intelligence
+  - action: utter_Buisness_intelligence
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: deny
+  - action: utter_happy
+
+- story:  buisness path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Buisness_intelligence
+  - action: utter_Buisness_intelligence
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_Contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+- story: data path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Data_Science_Consulting
+  - action: utter_Data_Science_Consulting
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: affirm
+  - action: utter_give_details
+  
+- story: data path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Data_Science_Consulting
+  - action: utter_Data_Science_Consulting
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: deny
+  - action: utter_happy
+
+- story: data path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Data_Science_Consulting
+  - action: utter_Data_Science_Consulting
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_Contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: chatbot path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: affirm
+  - action: utter_give_details
+
+- story: chatbot path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: deny
+  - action: utter_happy
+
+- story: chatbot path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_Contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: customer path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: affirm
+  - action: utter_give_details
+
+- story: customer path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_are_you_intrested
+  - intent: deny
+  - action: utter_happy
+
+- story: customer path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: services
+  - action: utter_services
+  - intent: Chatbot
+  - action: utter_Chatbot
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_Contact
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: path 1
+  steps:
+  - intent: about_us
+  - action: utter_about_us
+
+- story: path 2
+  steps:
+  - intent: tell_about_company
+  - action: utter_about_company
+
+- story: path 3
+  steps:
+  - intent: Blog
+  - action: utter_blog
+
+
+
+- story: define data science consulting
+  steps:
+  - intent: Data_Science_Consulting
+  - action: utter_Data_Science_Consulting
+
+- story: define chatbot
+  steps:
+  - intent: Chatbot
+  - action: utter_Chatbot
+  
+- story: define custumer analytics
+  steps:
+  - intent: Customer_Analytics
+  - action: utter_Customer_Analytics
+
+- story: define Buisness analytics
+  steps:
+  - intent: Buisness_intelligence
+  - action: utter_Buisness_intelligence
+
+- story: define Market analytics
+  steps:
+  - intent: Market_Analytics
+  - action: utter_Market_Analytics
+
+- story: define Report and dashboard
+  steps:
+  - intent: Report_And_Dashboard
+  - action: utter_Report_And_Dashboard

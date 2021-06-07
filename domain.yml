@@ -1,0 +1,188 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- services:
+    use_entities: true
+- Buisness_intelligence:
+    use_entities: true
+- Data_Science_Consulting:
+    use_entities: true
+- Chatbot:
+    use_entities: true
+- Customer_Analytics:
+    use_entities: true
+- Market Analytics:
+    use_entities: true
+- Report_And_Dashboard:
+    use_entities: true
+- tell_about_company:
+    use_entities: true
+- about_us:
+    use_entities: true
+- Contact:
+    use_entities: true
+- Blog:
+    use_entities: true
+- tell_name:
+    use_entities: true
+- my_name:
+    use_entities:
+    - name
+- mobile_number:
+    use_entities:
+    - number
+- email_id:
+    use_entities:
+    - email
+- Market_Analytics:
+    use_entities: true
+entities:
+- name
+- number
+- email
+slots:
+  name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  number:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How may I help you?
+  utter_services:
+  - buttons:
+    - payload: /Buisness_intelligence
+      title: Buisness Intelligence
+    - payload: /Customer_Analytics
+      title: Customer Analytics
+    - payload: /Chatbot
+      title: Chatbot
+    - payload: /Data_Science_Consulting
+      title: Data Science Consulting
+    - payload: /Market_Analytics
+      title: Market Analytics
+    - payload: /Report_And_Dashboard
+      title: Report and Dashboard
+    text: 'Our services :'
+  utter_Buisness_intelligence:
+  - text: AI based end to end solutions wiil help you take better business decision making
+  utter_Data_Science_Consulting:
+  - text: Deep understanding about domain, mathematical & statistics will help you to walk through every key aspects business
+  utter_Chatbot:
+  - text: AI based Conversational Chatbot is to support and scale up your business and your relations with customers
+  utter_Customer_Analytics:
+  - text: Identify patterns in customer activity, learn about their business operation, including product lines
+  utter_Market_Analytics:
+  - text: Gathering, research and analyze the data to determine existing and future trends about market.
+  utter_Report_And_Dashboard:
+  - text: A visual summary of information makes you easier to identify patterns and trends than looking through raw data
+  utter_blog:
+  - text: |-
+      Know more about Root2ai with the help of our blogs👇
+      Twitter Sentiment Analysis : [Blog](http://www.root2ai.com/SentimentAnalysis.html)
+      Anti Counterfeiting Solution : [Blog](http://www.root2ai.com/AntiCounterfeitingSolution.html)
+      Automated Entity and Intent Extracrion : [Blog](http://www.root2ai.com/intentExtraction.html)
+  utter_Contact:
+  - text: |-
+      Contact us for more information 
+      Contact : 07045701735 
+      Here is the link to Our [Website](http://www.root2ai.com)
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_are_you_intrested:
+  - text: Are you intrested?
+  utter_give_details:
+  - text: |-
+      Please provide your details 
+      so that we can contact you...
+      Please type Contact below 👇
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_about_company:
+  - buttons:
+    - payload: /services
+      title: Services
+    - payload: /about_us
+      title: About Us
+    - payload: /Blog
+      title: Blog
+    - payload: /Contact
+      title: Contact
+    text: |-
+      Root2ai offers solutions to discover, prepare, and blend data from structured and unstructured data source.
+      Menu :
+  utter_about_us:
+  - text: We are a team of talented and passionate consultants who solves complex business problems with use of math and computer science, deliver customized machine learning solutions and data analytics tools for enterprise and startup customers.
+  utter_name:
+  - text: heyy.. I am bot
+  utter_info:
+  - text: Sure! Our team will contact you at the earliest
+  utter_ask_name:
+  - text: Could you please provide your name below 👇
+  utter_ask_number:
+  - text: |-
+      Nice to virtualy meet you !!! 
+      Could you please provide your number 👇
+  utter_ask_email:
+  - text: Please provide your email below 👇
+  utter_details_thanks:
+  - text: |-
+      Thanks for providing the given details 
+      Name: {Name}, 
+      Mobile Number: {Mobile_number}, 
+      Email_Id: {Email} 
+      We will contact you soon
+actions:
+- action_submit
+forms:
+  user_details_form:
+    email:
+    - entity: email
+      type: from_entity
+    name:
+    - entity: name
+      type: from_entity
+    number:
+    - entity: number
+      type: from_entity
+e2e_actions: []

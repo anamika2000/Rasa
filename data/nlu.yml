@@ -1,0 +1,197 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: services
+  examples: |
+    - what are your services?
+    - your services
+    - tell me about your services
+    - what services you provide?
+    - what kind of services you provide?
+    - services
+
+- intent: Buisness_intelligence
+  examples: |
+    - what is buisness intelligence?
+    - tell me something about buisness intelligence
+
+- intent: Data_Science_Consulting
+  examples: |
+    - what is data science consulting
+    - tell me something about data science consulting
+
+- intent: Chatbot
+  examples: |
+    - which type of chatbor
+    - what is chatbot?
+    - tell me something about chatbot
+
+- intent: Customer_Analytics
+  examples: |
+    - what is customer analytics?
+    - tell me something about customer analytics
+
+- intent: Market_Analytics
+  examples: |
+    - what is market analytics?
+    - tell me something about market analytics
+
+- intent: Report_And_Dashboard
+  examples: |
+    - what is report and dashboard ?
+    - tell me something about report and dashboard
+
+- intent: Blog
+  examples: |
+    - Blogs
+    - blogs
+    - new blogs
+
+
+
+- intent: tell_name
+  examples: |
+    - What is your name?
+    - tell me your name
+    - what others call you
+    - what should i call you?
+
+- intent: tell_about_company
+  examples: |
+    - What is roo2ai?
+    - what does root2ai offer?
+    - root2ai
+    - Root2ai
+ 
+
+- intent: about_us
+  examples: |
+    - About us
+    - tell us about company
+    - something about root2ai
+    - tell us about root2ai
+
+- intent: Contact
+  examples: |
+    - Contacts
+    - how to contact
+    - contact
+  
+
+
+
+- intent: my_name
+  examples: |
+    - My name is [ashish]{"entity":"name","value":"ashish"}
+    - My name is [rahul]{"entity":"name","value":"rahul"}
+    - My name is [anamika]{"entity":"name","value":"anamika"}
+    - [ashish]{"entity":"name","value":"ahish"}
+    - [rahul]{"entity":"name","value":"rahul"}
+    - name is [ashish]{"entity":"name","value":"ahish"}
+    - [ashish]{"entity":"name","value":"ahish"} is my name
+
+- intent: mobile_number
+  examples: |
+    - My number is [1235463478]{"entity":"number"}
+    - [1235463478]{"entity":"number"}
+    - [1235463478]{"entity":"number"} is my number
+
+- intent: email_id
+  examples: |
+    - My email is [ashish978@gmail.com]{"entity":"email"}
+    - [rahulsingh674@gmail.com]{"entity":"email"}
+    - [rahulsingh674@gmail.com]{"entity":"email"} is my mail
+    - My mail is [ashishgupta978@gmail.com]{"entity":"email"}
+    - mail id is [ashishgupta978@gmail.com]{"entity":"email"}
+    - id is [rahulsingh674@gmail.com]{"entity":"email"}
+ 
